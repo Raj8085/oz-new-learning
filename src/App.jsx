@@ -6,6 +6,7 @@ import Service from "./pages/service/Service";
 import ContactPage from "./pages/contact/ContactPage";
 import ScrollToTop from "./components/layout/TopScroll";
 import Home from "./pages/Home/Home";
+import WebsiteWrapper from "./components/layout/Loader";
 // import About from "./pages/about/About";
 // import Gallery from "./pages/gallery/Gallery";
 // import Contact from "./pages/contact/Contact";
@@ -17,6 +18,7 @@ import Home from "./pages/Home/Home";
 
 function App() {
   return (
+    // <WebsiteWrapper>
     <Router>
       <ScrollToTop />
       <Routes>
@@ -26,6 +28,7 @@ function App() {
        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
+    // </WebsiteWrapper>
   );
 }
 
