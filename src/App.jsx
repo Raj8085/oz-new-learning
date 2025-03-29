@@ -1,34 +1,45 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from "./pages/home/Home";
 import About from "./pages/About/About";
 import Service from "./pages/service/Service";
-// import Contact from "./component/contact-component/Contact";
 import ContactPage from "./pages/contact/ContactPage";
 import ScrollToTop from "./components/layout/TopScroll";
 import Home from "./pages/Home/Home";
-import WebsiteWrapper from "./components/layout/Loader";
-// import About from "./pages/about/About";
-// import Gallery from "./pages/gallery/Gallery";
-// import Contact from "./pages/contact/Contact";
-// import Services from "./pages/services/Services";
-// import Clientele from "./pages/clientele/Clientele";
-// import Product from "./pages/product/Product";
-// import ScrollToTop from "./layout/ScrollToTop";
-
+import InquiryForm from "./components/layout/InquiryForm";
+import Courses from "./pages/courses/Courses";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay (e.g., fetching data or assets)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the delay as needed (2 seconds here)
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-gray-100">
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
   return (
-    // <WebsiteWrapper>
     <Router>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-       <Route path="/about" element={<About />} />
-       <Route path="/services" element={<Service />} />
-       <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/form" element={<InquiryForm />} />
       </Routes>
     </Router>
-    // </WebsiteWrapper>
   );
 }
 

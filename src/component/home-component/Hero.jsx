@@ -56,11 +56,12 @@ const Hero = () => {
                 Become a High-Paid <span className='text-black md:bg-white md:px-5 md:py-2 rounded-md'>Full Stack Developer</span><br />
                 Non IT Background ?
               </motion.h1> */}
+              <div className='hidden lg:block'>
               <motion.h1 
                 variants={textVariants}
                 className='text-3xl md:text-4xl md:mt-10 text-center font-bold text-white md:leading-[55px] tracking-tight'
               >
-                Become a High-Paid <span className='px-5 py-1 bg-white rounded-md'>
+                Become a High-Paid <br className='md:hidden' /> <span className='px-5 py-1 bg-white rounded-md'>
                 <AnimatedWordCycle 
                 words={[
                     "Developer",
@@ -73,8 +74,18 @@ const Hero = () => {
                 className={"text-black "} 
             /> 
                 </span>
-                 <br />Non IT Background ?
+                 <br className='hidden md:block' />Non IT Background ?
               </motion.h1>
+              </div>
+              
+              <div className='lg:hidden'>
+              <motion.h1 
+                variants={textVariants}
+                className='text-3xl md:text-4xl md:mt-10 text-center font-bold text-white md:leading-[55px] tracking-tight'
+              >
+                Become a High-Paid Full Stack Developer Non IT Background ?
+              </motion.h1>
+              </div>
               
               <motion.h2 
                 variants={textVariants}

@@ -1,12 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
+// import NavigationMenu from './NavigationMenu';
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
+import NavigationMenudemo from "./NavigationMenu";
+import NavigationMenuDemo from "./NavigationMenu";
 // import Logo from '../assets/Logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const location = useLocation(); // This hook gives you the current location
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -23,17 +38,18 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const links = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/services', label: 'Services' },
-    { to: '/contact', label: 'Contact' },
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/services", label: "Services" },
+    { to: "/contact", label: "Contact" },
+    { to: "/courses", label: "Courses" },
   ];
 
   return (
@@ -50,8 +66,8 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">
-            <div className="flex space-x-8">
-              {links.map((link) => (
+            <div className="flex space-x-2 lg:space-x-8">
+              {/* {links.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
@@ -63,7 +79,80 @@ const Navbar = () => {
                 >
                   {link.label}
                 </Link>
-              ))}
+              ))} */}
+              <Link
+                key={"/"}
+                to={"/"}
+                className={`${
+                  isActive("/")
+                    ? "text-white font-semibold bg-blue-700"
+                    : "text-black"
+                } hover:text-white hover:font-semibold hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200`}
+              >
+                Home
+              </Link>
+              <Link
+                key={"/about"}
+                to={"/about"}
+                className={`${
+                  isActive("/about")
+                    ? "text-white font-semibold bg-blue-700"
+                    : "text-black"
+                } hover:text-white hover:font-semibold hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200`}
+              >
+                About
+              </Link>
+              <Link
+                key={"/services"}
+                to={"/services"}
+                className={`${
+                  isActive("/services")
+                    ? "text-white font-semibold bg-blue-700"
+                    : "text-black"
+                } hover:text-white hover:font-semibold hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200`}
+              >
+                Services
+              </Link>
+              <div
+                className={`hover:text-white hover:font-semibold hover:bg-blue-700 rounded-md text-base font-medium transition-colors duration-200`}
+              >
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger>
+                        <p>Courses</p>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="flex flex-col backdrop-blur-sm bg-white/20 gap-3 py-3 px-2">
+                          <NavigationMenuDemo />
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </div>
+
+              {/* Show component when hovered */}
+              {/* {isHovered && (
+        <div
+        className='absolute top-16 left-1/2 transform -translate-x-1/2 z-50'
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <NavigationMenu />
+        </div>
+      )} */}
+              <Link
+                key={"/contact"}
+                to={"/contact"}
+                className={`${
+                  isActive("/contact")
+                    ? "text-white font-semibold bg-blue-700"
+                    : "text-black"
+                } hover:text-white hover:font-semibold hover:bg-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200`}
+              >
+                Contact
+              </Link>
             </div>
           </div>
 
@@ -120,31 +209,31 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      <AnimatePresence >
-        {isOpen && (
-          <motion.div
-            className="md:hidden pb-3"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-          >
-            <div className="px-2 pt-5 pb-1 space-y-1 sm:px-3 ">
-              {links.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className={`block ${
-                    isActive(link.to)
-                      ? 'text-white bg-blue-700 font-semibold'
-                      : 'text-gray-500'
-                  } px-3 py-2 rounded-md text-base font-medium transition-colors duration-200`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-            {/* <Link
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="md:hidden pb-3"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <div className="px-2 pt-5 pb-1 space-y-1 sm:px-3 ">
+                {links.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className={`block ${
+                      isActive(link.to)
+                        ? "text-white bg-blue-700 font-semibold"
+                        : "text-gray-500"
+                    } px-3 py-2 rounded-md text-base font-medium transition-colors duration-200`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              {/* <Link
                   key={"/contact"}
                   to={"/contact"}
                   className={`block ${
@@ -157,9 +246,9 @@ const Navbar = () => {
                 >
                   Contact
                 </Link> */}
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
