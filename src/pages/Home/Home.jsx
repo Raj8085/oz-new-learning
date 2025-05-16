@@ -5,14 +5,13 @@ import Hero from '@/component/home-component/Hero'
 import ImageCarousel from '@/component/home-component/ImageCarousel'
 import WhyChooseUs from '@/component/home-component/WhyChooseUs'
 import Footer from '@/components/layout/Footer'
-import Navbar from '@/components/layout/Navbar'
-import React from 'react'
+// import Navbar from '@/components/layout/Navbar'
 
 
 function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <ImageCarousel />
       <ExploreCourses />
@@ -23,5 +22,4 @@ function Home() {
     </div>
   )
 }
-
 export default Home

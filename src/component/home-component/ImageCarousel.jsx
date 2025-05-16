@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,7 @@ import "swiper/css/effect-fade";
 
 // Import required Swiper modules
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 // import Image from "next/image";
@@ -21,10 +21,10 @@ const ImageCarousel = () => {
   const slides = [
     {
       id: 1,
-      src: "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-      title: "Rise Food Mall",
-      price: "INR 33.70 Lac",
-      location: "Noida Ext Sector 1",
+      src: "/ozgallary.jpg",
+      title: "Make an enquiry",
+      // price: "INR 33.70 Lac",
+      location: "Indore",
       size: "3.85 Acres",
       configuration: {
         type: "Shop",
@@ -33,10 +33,10 @@ const ImageCarousel = () => {
     },
     {
       id: 2,
-      src: "https://wallpapercave.com/wp/wp3386769.jpg",
-      title: "Pearl Plaza",
-      price: "INR 45.50 Lac",
-      location: "Sector 2, Greater Noida",
+      src: "/ozgallery2.jpg",
+      title: "Make an enquiry",
+      // price: "INR 45.50 Lac",
+      location: "Indore",
       size: "5.0 Acres",
       configuration: {
         type: "Office Space",
@@ -45,10 +45,10 @@ const ImageCarousel = () => {
     },
     {
       id: 3,
-      src: "https://wallpaperaccess.com/full/809523.jpg",
-      title: "Crystal Tower",
-      price: "INR 55.00 Lac",
-      location: "Noida City Center",
+      src: "/ozgallary3.jpg",
+      title: "Make an enquiry",
+      // price: "INR 55.00 Lac",
+      location: "Indore",
       size: "4.5 Acres",
       configuration: {
         type: "Retail",
@@ -57,28 +57,28 @@ const ImageCarousel = () => {
     },
     {
       id: 4,
-      src: "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
-      title: "Indore M.p",
-      price: "INR 55.00 Lac",
-      location: "Indore City",
+      src: "/gallary4.jpg",
+      title: "Make an enquiry",
+      // price: "INR 55.00 Lac",
+      location: "Indore",
       size: "7.5 Acres",
       configuration: {
         type: "Retail",
         area: "160 sq.Ft",
       },
     },
-    {
-      id: 5,
-      src: "https://wallpapercave.com/wp/wp3386769.jpg",
-      title: "Pune",
-      price: "INR 65.00 Lac",
-      location: "Pune City",
-      size: "2.5 Acres",
-      configuration: {
-        type: "Mall",
-        area: "60 sq.Ft",
-      },
-    },
+    // {
+    //   id: 5,
+    //   src: "https://wallpapercave.com/wp/wp3386769.jpg",
+    //   title: "Pune",
+    //   price: "INR 65.00 Lac",
+    //   location: "Pune City",
+    //   size: "2.5 Acres",
+    //   configuration: {
+    //     type: "Mall",
+    //     area: "60 sq.Ft",
+    //   },
+    // },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -127,19 +127,19 @@ const ImageCarousel = () => {
     <div className="py-20 px-5 xl:px-40">
       <div>
         <h2 className="text-2xl md:text-3xl font-semibold text-center">
-          Hot Selling Projects in India
+          Discover the Spirit of Our Campus.
         </h2>
       </div>
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center mt-10 gap-5 ">
         <div className="flex flex-col justify-between bg-white rounded-lg p-5 shadow-lg shadow-gray-400 w-full lg:w-[25%] h-[380px]">
-          <div>
-            {/* <img
+          {/* <div>
+            <img
               src="/building-img.svg"
               alt="logo"
             //   width={50}
             //   height={50}
               className="w-28 h-28"
-            /> */}
+            />
             <h2 className="text-xl font-semibold mt-4">
               Best Sellers in India
             </h2>
@@ -148,14 +148,30 @@ const ImageCarousel = () => {
               rated builders in the country, backed by our award-winning
               start-to-finish services.
             </p>
-          </div>
+          </div> */}
           <div>
+  <img
+    src="https://www.mindinventory.com/blog/wp-content/uploads/2022/10/full-stack1200.png"
+    alt="Coding Course"
+    className="w-64 h-32"
+  />
+  <h2 className="text-xl font-semibold mt-4">
+    Top IT Courses in Demand
+  </h2>
+  <p className="text-sm text-gray-500 mt-2">
+    Explore our most popular courses like Full-Stack Web Development, Data Science, and Cloud Computing — designed by industry experts to get you job-ready.
+  </p>
+</div>
+
+          <div>
+            <Link to="/fullstack">
             <Button
               variant="default"
-              className="bg-primary rounded-md text-white"
+              className="bg-gradient-to-r from-orange-600 to-red-500 rounded-md"
             >
               View All
             </Button>
+            </Link>
           </div>
         </div>
         <div className="h-[380px] w-full lg:w-[75%] relative">
@@ -273,12 +289,14 @@ const ImageCarousel = () => {
                             </div> */}
                           </div>
                           <div className="mt-5">
+                            <a href="tel: 9171453224" className="text-sm">
                             <Button
                               variant="default"
-                              className="bg-green-700 w-full rounded-md text-white"
+                              className="bg-gradient-to-r from-orange-600 to-red-500 hover:from-orange-500 hover:to-red-400 w-full rounded-md text-white"
                             >
                               Get a call back
                             </Button>
+                            </a>
                           </div>
                         </div>
                       </div>

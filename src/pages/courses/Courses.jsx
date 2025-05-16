@@ -18,7 +18,7 @@ const Courses = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Mobile View Container */}
       <div className="md:hidden"> {/* Only show on mobile (hidden on medium screens and above) */}

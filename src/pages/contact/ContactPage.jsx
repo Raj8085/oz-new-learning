@@ -6,7 +6,7 @@ import React from 'react'
 const ContactPage = () => {
   return (
     <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <Contact/>
         <Footer />
     </div>

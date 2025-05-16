@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { useNavigate } from 'react-router-dom'; // Import for redirection
@@ -87,5 +87,4 @@ const InquiryForm = () => {
     </div>
   );
 };
-
 export default InquiryForm;

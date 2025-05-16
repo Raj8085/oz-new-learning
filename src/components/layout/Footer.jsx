@@ -12,7 +12,7 @@ const Footer = () => {
   
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=I+am+interested+in+your+products.+Please+share+the+details`
   return (
-    <footer className="text-gray-300 bg-gradient-to-r from-blue-600 to-purple-600 border-t-2 border-white py-20 px-5 md:px-20 lg:px-40"
+    <footer className="text-gray-300 bg-gradient-to-r from-orange-400 to-orange-600 border-t-2 border-white py-20 px-5 md:px-20 lg:px-40"
     // style={{
     //   backgroundColor: '#283B59',
     //   backgroundImage: `radial-gradient(white 10%, transparent 11%)`,
@@ -24,10 +24,10 @@ const Footer = () => {
           <div className='flex flex-col gap-10 lg:flex-row  justify-between'>
 
           <div className="w-full">
-            <h2 className="text-white text-3xl font-bold mb-4">MCED Footer</h2>
-            {/* <img src="https://res.cloudinary.com/dhf8eyjee/image/upload/v1742973215/Image-Shree/Home-page/yk7lkqlp68f4nrhnhnvf.png" alt="Shree Engineers" className="w-60" /> */}
+            {/* <h2 className="text-white text-3xl font-bold mb-4">MCED Footer</h2> */}
+            <img src="/ozLearningLogoNew.jpg" alt="Shree Engineers" className="w-20 h-20" />
             <p className="text-white text-lg font-semibold mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quidem nulla consequuntur ipsa quae obcaecati, sint voluptate facilis repudiandae! Velit.
+            PREMIER IT TRAINING & PLACEMENT INSTITUTE FOR HIGH-DEMAND JOBS
             </p>
           </div>
 
@@ -47,9 +47,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold text-xl mb-4">Information</h3>
             <ul className="space-y-2 text-white">
-              <li>8718812605</li>
-              <li>info@shreeengineers.in</li>
-              <li>416, Prem Trade Centre, Maharani Road, Indore, Madhya Pradesh, India 452007</li>
+              <li>9171453224</li>
+              <li>info@ozlearning.com</li>
+              <li>PU4 , Indore, Madhya Pradesh, India 452007</li>
             </ul>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
               <li>10:00am - 7:00pm</li>
               {/* <li>Fri 8:00 - 21:00</li>
               <li>Sat 9:30 - 15: 00</li> */}
-              <li>Sun off</li>
+              {/* <li>Sun off</li> */}
             </ul>
           </div>
         </div>
@@ -93,5 +93,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

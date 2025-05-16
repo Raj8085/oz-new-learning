@@ -6,7 +6,7 @@ import React from 'react'
 const About = () => {
   return (
     <div>
-        <Navbar />
+        {/* <Navbar /> */}
         <AboutPage/>
         <Footer />
     </div>
