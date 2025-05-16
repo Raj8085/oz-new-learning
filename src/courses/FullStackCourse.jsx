@@ -132,14 +132,14 @@ export default function FullStackCoursePage() {
           >
             Projects
           </button>
-          <button
+          {/* <button
             onClick={() => setActiveTab("instructors")}
             className={`px-4 py-2 font-medium rounded-lg whitespace-nowrap ${
               activeTab === "instructors" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700"
             }`}
           >
             Instructors
-          </button>
+          </button> */}
           <button
             onClick={() => setActiveTab("careers")}
             className={`px-4 py-2 font-medium rounded-lg whitespace-nowrap ${
