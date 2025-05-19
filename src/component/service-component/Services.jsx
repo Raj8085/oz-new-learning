@@ -499,11 +499,12 @@ const ServicesPage = () => {
     },
     {
       icon: Network,
-      title: "Network Administration",
-      description: "Advanced courses in network design, security, and management with hands-on laboratory experience.",
-      color: "text-amber-700",
-      details: "Learn to design, implement and manage enterprise networks. Get hands-on experience with routers, switches, and network security devices in our state-of-the-art lab."
-    },
+      title: "UI/UX Design",
+      description: "Comprehensive training in user interface and experience design with practical design tool usage.",
+      color: "text-pink-600",
+      details: "Master the art of designing intuitive user interfaces and seamless user experiences. Learn wireframing, prototyping, and user research using tools like Figma, Adobe XD, and Sketch."
+    }
+    ,
     {
       icon: Database,
       title: "Data Science & Analytics",
@@ -867,9 +868,11 @@ const ServicesPage = () => {
                             <div className="text-sm text-amber-700">
                               <span className="font-medium">Prerequisites:</span> {program.prerequisites}
                             </div>
+                            <Link to="/contact">
                             <button className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all">
                               Enroll Now
                             </button>
+                            </Link>
                           </div>
                         </div>
                       ))}
@@ -927,7 +930,7 @@ const programsData = [
       {
         title: "Python Programming Specialist",
         description: "Comprehensive Python training covering automation, web development, and data processing applications.",
-        duration: "12 weeks",
+        duration: "5-6 months",
         schedule: "Flexible online or in-person options",
         level: "Beginner to Intermediate",
         prerequisites: "None",
@@ -947,7 +950,7 @@ const programsData = [
       {
         title: "Mobile App Development",
         description: "Learn to build cross-platform mobile applications using React Native for iOS and Android.",
-        duration: "14 weeks",
+        duration: "5-6 months",
         schedule: "Weekday evenings",
         level: "Intermediate",
         prerequisites: "JavaScript basics",
@@ -966,55 +969,55 @@ const programsData = [
       }
     ]
   },
-  {
-    id: 2,
-    category: "Network Administration",
-    icon: Network,
-    color: "text-amber-700",
-    bgColor: "bg-amber-100",
-    programs: [
-      {
-        title: "Cisco Network Associate",
-        description: "Comprehensive networking course covering routing, switching, and network security fundamentals.",
-        duration: "10 weeks",
-        schedule: "Weekend classes",
-        level: "Beginner to Intermediate",
-        prerequisites: "Basic IT knowledge",
-        certification: "Aligned with CCNA",
-        price: "$1,799",
-        startDates: ["June 20, 2025", "September 15, 2025"],
-        topics: [
-          "Network Fundamentals",
-          "IP Addressing & Subnetting",
-          "Routing Protocols",
-          "VLANs & Trunking",
-          "Network Security Basics",
-          "Wireless Networking",
-          "Network Troubleshooting"
-        ]
-      },
-      {
-        title: "Advanced Network Security",
-        description: "Deep dive into enterprise network security, threat detection, and mitigation strategies.",
-        duration: "12 weeks",
-        schedule: "Weekday evenings",
-        level: "Advanced",
-        prerequisites: "Networking basics",
-        certification: "Network Security Professional",
-        price: "$2,499",
-        startDates: ["July 10, 2025", "October 5, 2025"],
-        topics: [
-          "Firewall Configuration & Management",
-          "Intrusion Detection Systems",
-          "VPN Technologies",
-          "Security Policies & Compliance",
-          "Threat Analysis",
-          "Incident Response",
-          "Security Auditing"
-        ]
-      }
-    ]
-  },
+  // {
+  //   id: 2,
+  //   category: "Network Administration",
+  //   icon: Network,
+  //   color: "text-amber-700",
+  //   bgColor: "bg-amber-100",
+  //   programs: [
+  //     {
+  //       title: "Cisco Network Associate",
+  //       description: "Comprehensive networking course covering routing, switching, and network security fundamentals.",
+  //       duration: "5-6 months",
+  //       schedule: "Weekend classes",
+  //       level: "Beginner to Intermediate",
+  //       prerequisites: "Basic IT knowledge",
+  //       certification: "Aligned with CCNA",
+  //       price: "$1,799",
+  //       startDates: ["June 20, 2025", "September 15, 2025"],
+  //       topics: [
+  //         "Network Fundamentals",
+  //         "IP Addressing & Subnetting",
+  //         "Routing Protocols",
+  //         "VLANs & Trunking",
+  //         "Network Security Basics",
+  //         "Wireless Networking",
+  //         "Network Troubleshooting"
+  //       ]
+  //     },
+  //     {
+  //       title: "Advanced Network Security",
+  //       description: "Deep dive into enterprise network security, threat detection, and mitigation strategies.",
+  //       duration: "5-6 months",
+  //       schedule: "Weekday evenings",
+  //       level: "Advanced",
+  //       prerequisites: "Networking basics",
+  //       certification: "Network Security Professional",
+  //       price: "$2,499",
+  //       startDates: ["July 10, 2025", "October 5, 2025"],
+  //       topics: [
+  //         "Firewall Configuration & Management",
+  //         "Intrusion Detection Systems",
+  //         "VPN Technologies",
+  //         "Security Policies & Compliance",
+  //         "Threat Analysis",
+  //         "Incident Response",
+  //         "Security Auditing"
+  //       ]
+  //     }
+  //   ]
+  // },
   {
     id: 3,
     category: "Data Science & Analytics",
@@ -1025,7 +1028,7 @@ const programsData = [
       {
         title: "Data Analysis with Python",
         description: "Learn to process, analyze, and visualize data using Python and popular libraries.",
-        duration: "12 weeks",
+        duration: "5-6 months months",
         schedule: "Flexible online or in-person options",
         level: "Beginner to Intermediate",
         prerequisites: "Basic programming helpful but not required",
@@ -1045,7 +1048,7 @@ const programsData = [
       {
         title: "Machine Learning Foundations",
         description: "Introduction to machine learning algorithms, techniques, and practical applications.",
-        duration: "14 weeks",
+        duration: "5-6 months",
         schedule: "Weekday evenings & weekend options",
         level: "Intermediate",
         prerequisites: "Python basics",
@@ -1074,7 +1077,7 @@ const programsData = [
       {
         title: "Ethical Hacking & Penetration Testing",
         description: "Learn ethical hacking methodologies, vulnerability assessment, and security testing.",
-        duration: "12 weeks",
+        duration: "5-6 months months",
         schedule: "Weekend intensive",
         level: "Intermediate to Advanced",
         prerequisites: "Basic networking knowledge",
@@ -1094,7 +1097,7 @@ const programsData = [
       {
         title: "Security Operations Center (SOC) Analyst",
         description: "Develop skills needed to work in a security operations center monitoring and responding to threats.",
-        duration: "10 weeks",
+        duration: "5-6 months",
         schedule: "Weekday evenings",
         level: "Intermediate",
         prerequisites: "IT or networking background",
@@ -1123,7 +1126,7 @@ const programsData = [
       {
         title: "AWS Solutions Architect",
         description: "Comprehensive training on designing and deploying scalable systems on Amazon Web Services.",
-        duration: "10 weeks",
+        duration: "5-6 months",
         schedule: "Weekday evenings & weekend options",
         level: "Intermediate",
         prerequisites: "Basic IT knowledge",
@@ -1143,7 +1146,7 @@ const programsData = [
       {
         title: "Multi-Cloud Specialist",
         description: "Learn to work across AWS, Azure, and Google Cloud platforms for versatile cloud expertise.",
-        duration: "14 weeks",
+        duration: "5-6 months",
         schedule: "Weekend classes",
         level: "Intermediate to Advanced",
         prerequisites: "Basic cloud knowledge",
@@ -1172,7 +1175,7 @@ const programsData = [
       {
         title: "Deep Learning Specialist",
         description: "Master neural networks, deep learning frameworks, and AI model development.",
-        duration: "16 weeks",
+        duration: "5-6 months",
         schedule: "Weekday evenings",
         level: "Advanced",
         prerequisites: "Python programming, basic statistics",
@@ -1192,7 +1195,7 @@ const programsData = [
       {
         title: "Natural Language Processing",
         description: "Learn to build AI systems that can understand, interpret, and generate human language.",
-        duration: "12 weeks",
+        duration: "5-6 months",
         schedule: "Weekend intensive",
         level: "Intermediate to Advanced",
         prerequisites: "Python programming",

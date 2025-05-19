@@ -26,8 +26,8 @@ export default function ReactCoursePage() {
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
       {/* Hero Section */}
       <div className="bg-blue-900 text-white">
-        <div className="container mx-auto px-16 py-16 md:py-24">
-          <div className="flex flex-col md:flex-row items-center md:mt-44">
+        <div className="container mx-auto px-8 py-16 md:py-24">
+          <div className="flex flex-col md:flex-row items-center md:mt-20">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">React.js Development</h1>
               <p className="text-xl mb-6">
@@ -716,7 +716,7 @@ export default function ReactCoursePage() {
       </div>
 
       {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* <div className="container mx-auto px-4 py-16">
         <div className="bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center">Have Questions? Contact Us</h2>
 
@@ -798,7 +798,7 @@ export default function ReactCoursePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Tech Stack Section */}
       <div className="bg-gray-50 py-16">

@@ -15,6 +15,7 @@ import {
   CheckCircle,
   X
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ExplorePrograms = ({ isOpen, onClose }) => {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -92,55 +93,6 @@ const ExplorePrograms = ({ isOpen, onClose }) => {
     },
     {
       id: 2,
-      category: "Network Administration",
-      icon: Network,
-      color: "text-amber-700",
-      bgColor: "bg-amber-100",
-      programs: [
-        {
-          title: "Cisco Network Associate",
-          description: "Comprehensive networking course covering routing, switching, and network security fundamentals.",
-          duration: "10 weeks",
-          schedule: "Weekend classes",
-          level: "Beginner to Intermediate",
-          prerequisites: "Basic IT knowledge",
-          certification: "Aligned with CCNA",
-          price: "$1,799",
-          startDates: ["June 20, 2025", "September 15, 2025"],
-          topics: [
-            "Network Fundamentals",
-            "IP Addressing & Subnetting",
-            "Routing Protocols",
-            "VLANs & Trunking",
-            "Network Security Basics",
-            "Wireless Networking",
-            "Network Troubleshooting"
-          ]
-        },
-        {
-          title: "Advanced Network Security",
-          description: "Deep dive into enterprise network security, threat detection, and mitigation strategies.",
-          duration: "12 weeks",
-          schedule: "Weekday evenings",
-          level: "Advanced",
-          prerequisites: "Networking basics",
-          certification: "Network Security Professional",
-          price: "$2,499",
-          startDates: ["July 10, 2025", "October 5, 2025"],
-          topics: [
-            "Firewall Configuration & Management",
-            "Intrusion Detection Systems",
-            "VPN Technologies",
-            "Security Policies & Compliance",
-            "Threat Analysis",
-            "Incident Response",
-            "Security Auditing"
-          ]
-        }
-      ]
-    },
-    {
-      id: 3,
       category: "Data Science & Analytics",
       icon: Database,
       color: "text-red-600",
@@ -189,7 +141,7 @@ const ExplorePrograms = ({ isOpen, onClose }) => {
       ]
     },
     {
-      id: 4,
+      id: 3,
       category: "Cybersecurity",
       icon: Shield,
       color: "text-purple-700",
@@ -238,7 +190,7 @@ const ExplorePrograms = ({ isOpen, onClose }) => {
       ]
     },
     {
-      id: 5,
+      id: 4,
       category: "Cloud Computing",
       icon: CloudLightning,
       color: "text-blue-700",
@@ -287,7 +239,7 @@ const ExplorePrograms = ({ isOpen, onClose }) => {
       ]
     },
     {
-      id: 6,
+      id: 5,
       category: "Artificial Intelligence",
       icon: Brain,
       color: "text-teal-700",
@@ -460,9 +412,11 @@ const ExplorePrograms = ({ isOpen, onClose }) => {
                         <div className="text-sm text-amber-700">
                           <span className="font-medium">Prerequisites:</span> {program.prerequisites}
                         </div>
+                        <Link to="/contact">
                         <button className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all">
                           Enroll Now
                         </button>
+                        </Link>
                       </div>
                     </div>
                   ))}

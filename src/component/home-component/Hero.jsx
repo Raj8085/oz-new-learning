@@ -239,6 +239,7 @@ import Form from './Form'
 import ImageSlider from './ImageSlider'
 import AnimatedWordCycle from '@/components/ui/animated-text-circle'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -347,8 +348,125 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+  <div className="flex flex-col lg:flex-row items-center gap-10 h-full w-full py-4 md:py-8">
+    {/* Left Content */}
+    <motion.div 
+      variants={textVariants}
+      className="lg:w-1/2 xl:w-3/5 w-full h-full pt-4 md:pt-10 text-center lg:text-left order-1 lg:order-1"
+    >
+      <motion.div 
+        variants={textVariants}
+        className="space-y-6"
+      >
+        <motion.h1 
+          variants={textVariants}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight"
+        >
+          <span className="inline-block mb-2 sm:mb-4">Become a High-Paid</span>
+          <br className="hidden sm:block" />
+          <motion.div 
+            className="inline-block px-4 py-2 bg-white rounded-lg shadow-md"
+            variants={glowVariants}
+            initial="initial"
+            animate="animate"
+          >
+            {/* Increased height to accommodate full text */}
+            <div className="min-h-12 sm:min-h-16 ">
+              <span className="bg-gradient-to-r from-orange-500 via-red-500 to-rose-500 bg-clip-text text-transparent">
+                <AnimatedWordCycle 
+                  words={[
+                    "Developer",
+                    "Designer",
+                    "Programmer",
+                    "Engineer",
+                    "Coder",
+                  ]}
+                  interval={2500}
+                  className="bg-gradient-to-r from-orange-500 via-red-500 to-rose-500 bg-clip-text text-transparent font-bold py-4"
+                />
+              </span>
+            </div>
+          </motion.div>
+          <br className="block" />
+          <motion.span 
+            animate={floatingAnimation}
+            className="inline-block mt-2 py-4 sm:mt-4 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+          >
+            Non-IT Background?
+          </motion.span>
+        </motion.h1>
+        
+        <motion.h2 
+          variants={textVariants}
+          className="text-xl md:text-2xl font-medium text-orange-800 tracking-wide"
+        >
+          No Problem! <span className="inline-block font-bold">Start Your Journey Today!</span>
+        </motion.h2>
+
+        {/* CTA Button */}
+        <motion.div
+          variants={textVariants}
+          className="pt-4 pb-8"
+        >
+          <Link to="/contact">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg transform transition-all duration-300"
+          >
+            Get Started
+          </motion.button>
+          </Link>
+        </motion.div>
+      </motion.div>
+
+      {/* Image Slider with Animation */}
+      <motion.div 
+        variants={textVariants}
+        id="hero-slider" 
+        className="w-full h-full mt-2 sm:mt-6 overflow-hidden"
+      > 
+        <motion.div
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 100, 
+            damping: 10 
+          }}
+          className="rounded-xl shadow-xl overflow-hidden"
+        >
+          <ImageSlider/>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+
+    {/* Form Section */}
+    <motion.div
+      variants={textVariants}
+      id="form" 
+      className="lg:w-1/2 xl:w-2/5 w-full order-1 lg:order-2"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 100, 
+        delay: 0.3 
+      }}
+    >
+      <motion.div 
+        className="bg-white p-6 rounded-2xl shadow-xl"
+        whileHover={{ boxShadow: "0 20px 30px rgba(249, 115, 22, 0.15)" }}
+        transition={{ duration: 0.3 }}
+      >
+        <Form />
+      </motion.div>
+    </motion.div>
+  </div>
+</div>
+
+      {/* <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="flex flex-col lg:flex-row items-center gap-10 h-full w-full py-4 md:py-8">
-          {/* Left Content */}
           <motion.div 
             variants={textVariants}
             className="lg:w-1/2 xl:w-3/5 w-full h-full pt-4 md:pt-10 text-center lg:text-left order-1 lg:order-1"
@@ -399,22 +517,22 @@ const Hero = () => {
                 No Problem! <span className="inline-block font-bold">Start Your Journey Today!</span>
               </motion.h2>
 
-              {/* CTA Button */}
               <motion.div
                 variants={textVariants}
                 className="pt-4 pb-8"
               >
+                <Link to="/contact">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 shadow-lg transform transition-all duration-300"
                 >
-                  Get Started Free
+                  Get Started
                 </motion.button>
+                </Link>
               </motion.div>
             </motion.div>
 
-            {/* Image Slider with Animation */}
             <motion.div 
               variants={textVariants}
               id="hero-slider" 
@@ -435,7 +553,6 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Form Section */}
           <motion.div
             variants={textVariants}
             id="form" 
@@ -457,9 +574,8 @@ const Hero = () => {
             </motion.div>
           </motion.div>
         </div>
-      </div>
+      </div> */}
 
-      {/* Decorative wave at bottom */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
         <svg 
           className="relative block w-full h-10 sm:h-16" 

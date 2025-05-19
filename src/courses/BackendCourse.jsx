@@ -721,7 +721,7 @@ export default function BackendCoursePage() {
       </div>
 
       {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* <div className="container mx-auto px-4 py-16">
         <div className="bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center">Have Questions? Contact Us</h2>
 
@@ -803,7 +803,7 @@ export default function BackendCoursePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Tech Stack Section */}
       <div className="bg-gray-50 py-16">

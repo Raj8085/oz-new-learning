@@ -578,7 +578,7 @@ const Form = () => {
     )
 
     return (
-        <div className="w-full h-full relative">
+        <div className="w-full h-full relative lg:mt-36">
             <div className="lg:absolute lg:bottom-0 w-full lg:w-full bg-white rounded-lg p-3 sm:p-6 drop-shadow-md">
                 {isSubmitted && (
                     <div className="mb-4 p-3 bg-green-100 text-green-800 rounded-md flex items-center">
@@ -590,7 +590,7 @@ const Form = () => {
                 {alreadyBooked && !isSubmitted && (
                     <div className="mb-4 p-3 bg-blue-100 text-blue-800 rounded-md flex items-center">
                         <Info className="h-5 w-5 mr-2" />
-                        <span>You've already booked a class! We'll contact you with further details.</span>
+                        <span>You&apos;ve already booked a class! We&apos;ll contact you with further details.</span>
                     </div>
                 )}
 

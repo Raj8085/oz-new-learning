@@ -28,9 +28,9 @@ export default function DSACourse() {
     <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
       {/* Hero Section */}
       <div className="bg-blue-900 text-white">
-        <div className="container mx-auto px-4 py-16 md:py-24">
+        <div className="container mx-auto px-4  py-16 md:py-24">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0 md:mt-44">
+            <div className="md:w-1/2 mb-8 md:mb-0 md:mt-16">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Data Structures & Algorithms with C/C++</h1>
               <p className="text-xl mb-6">
                 Master the foundations of computer science through efficient algorithms and data structures implementation in C and C++
@@ -741,7 +741,7 @@ export default function DSACourse() {
       </div>
 
       {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* <div className="container mx-auto px-4 py-16">
         <div className="bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center">Have Questions? Contact Us</h2>
 
@@ -823,7 +823,7 @@ export default function DSACourse() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Tech Stack Section */}
       <div className="bg-gray-50 py-16">

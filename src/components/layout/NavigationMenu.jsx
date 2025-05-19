@@ -216,6 +216,7 @@
 // };
 // export default NavigationMenuDemo;
 
+
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronRight } from "lucide-react";
@@ -272,7 +273,7 @@ const NavigationMenuDemo = () => {
       subItems: [
         { id: 401, title: "Spring Boot", path: "/java" },
         { id: 402, title: "Hibernate", path: "/java" },
-        { id: 403, title: "JavaFX", path: "/java" },
+      
       ],
     },
     {
